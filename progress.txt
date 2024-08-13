@@ -1,0 +1,16 @@
+brain storm and plan project outcome and structure
+
+init npm and install express
+create the project structure
+
+basic formats for the homepage and post partial (ejs files)
+set up server (index.js)
+connect css to ejs files (set the directory of static files)
+render ejs files in the server (can use app.set to change the default views folder)
+add partial post to the ejs file (<%-include%>)
+iterate all the posts and pass them as parameters to add multiple post partials
+
+TODO
+create, update, delete posts
+upload images
+polish css

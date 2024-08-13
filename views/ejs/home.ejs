@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>NanoBlog</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="icon">
+    </header>
+    <section class="post-creation">
+        <h2>hello</h2>
+        <button class="create-post">
+
+        </button>
+        <input type="textarea">
+        <button class="submit-post">
+
+        </button>
+    </section>
+    <section class="post-view">
+        <!-- dynamic post content based on server data -->
+         <% for (let i = 0; i < posts.length ; i++) { %>
+            <%- include("partials/post.ejs", {title: posts[i].title, content: posts[i].content}) %>
+            <% } %>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
