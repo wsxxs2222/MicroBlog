@@ -11,23 +11,28 @@
         <img src="" alt="icon">
     </header>
     <section class="post-creation">
-        <h2>hello</h2>
         <button class="create-post">
-
+            Create Post
         </button>
-        <input type="textarea">
-        <button class="submit-post">
-
-        </button>
+        <form action="/" method="post">
+            <input type="text" name="title">
+            <input type="textarea" name="content">
+            <button class="submit-post" type="submit">
+                submit
+            </button>
+            <input type="file" class="imageInput" accept="image/*">
+            <input type="hidden" name="imgUrl" id="imgString">
+        </form>
     </section>
     <section class="post-view">
         <!-- dynamic post content based on server data -->
          <% for (let i = 0; i < posts.length ; i++) { %>
-            <%- include("partials/post.ejs", {title: posts[i].title, content: posts[i].content}) %>
+            <%- include("partials/post.ejs", {post: posts[i], index: i}) %>
             <% } %>
     </section>
     <footer>
 
     </footer>
+    <script src="js/home.js"></script>
 </body>
 </html>

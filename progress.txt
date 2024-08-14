@@ -10,7 +10,26 @@ render ejs files in the server (can use app.set to change the default views fold
 add partial post to the ejs file (<%-include%>)
 iterate all the posts and pass them as parameters to add multiple post partials
 
+To access the index of the post in the home.ejs file: when we iterate the posts array sent by the res.render, we pass the index i
+in post.ejs
+
+problem in delete post: I tried to bind delete button to event listener (adding a js script to ejs file)
+The callback function sends a post request to /delete route with the index of the post. 
+But when I click the delete button, the page got stuck. Unless I refresh, I can't see the post deleted. When I tried to
+send delete request to / route, something went wrong and I can't redirect in app.delete.
+
+solve: I used the simple way, make the delete button a form and post to the /delete when it is clicked (send the index of 
+its corresponding post).
+
+problem in setting value of a button to a variable passed by res.render:
+when I send a variable with 2 words, value is set to only the first words
+
+solve: I put value = "<%= var %>" (surrounded by quotation marks)
+
+update logic: the update btn will open edit textbox if it is closed and will close it when it is open.
+In the edit mode, the textbox has a submit button which will close the textbox and update the post content.
+(design the expected logic and then code it)
+
 TODO
-create, update, delete posts
 upload images
 polish css

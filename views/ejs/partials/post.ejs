@@ -8,19 +8,36 @@
 <body>
     <h1>post</h1>
     <div class="post">
-        <div class="post-title">
-            <% if (locals.title) {%> 
-            <%= title %>
+        <% if (post.mode === "view") {%>
+            <div class="post-title">
+                <%= post.title %>
+            </div>
+            <div class="text">
+                <%= post.content %> 
+            </div>
+        <% } else if (post.mode === "edit") { %>
+            <form action="/update" method="post">
+                <input type="text" name="title" value="<%= post.title %>">
+                <input type="textarea" name="content" value="<%= post.content %>">
+                <button class="submit-post" type="submit" name="index" value=<%= index %>>
+                    OK
+                </button>
+            </form>
             <% } %>
-        </div>
-        <div class="text">
-            <% if (locals.content) {%> 
-            <%= content %> 
-            <% } %>
-        </div>
         <div class="image">
+            <img src="<%= post.imgUrl %>" alt="uploaded image">
 
         </div>
+        <form action="/edit" method="post">
+            <button class="update" type="submit" name="index" value=<%= index %>>
+                ⬆️
+            </button>
+        </form>
+        <form action="/delete" method="post">
+            <button class="delete" name="index" value=<%= index %> type="submit">
+                🗑️
+            </button>
+        </form>
     </div>
 </body>
 </html>
