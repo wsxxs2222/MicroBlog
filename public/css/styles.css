@@ -5,3 +5,19 @@ body {
 img {
     height: 200px;
 }
+
+textarea {
+    height: 150px;
+}
+
+.container {
+    display: flex;
+}
+
+.post-creation {
+    flex-basis: 50vw;
+}
+
+.post-view {
+    flex-basis: 50vw;
+}

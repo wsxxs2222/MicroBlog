@@ -34,7 +34,8 @@ app.post('/delete' , function (req, res) {
 });
 
 app.post('/update', function (req, res) {
-    updatePost(req.body.index, req.body.content, req.body.title);
+    // console.log(req.body);
+    updatePost(req.body.index, req.body.content, req.body.title, req.body.imgUrl);
     res.redirect('/');
 });
 
@@ -52,17 +53,18 @@ function createPost(object) {
         object.mode = "view";
         posts.push(object);
     }
-    console.log(object);
+    // console.log(object);
 }
 
 function deletePost(index) {
     posts.splice(index, 1);
 }
 
-function updatePost(index, content, title) {
+function updatePost(index, content, title, imgUrl) {
     // if the post was on view mode, set it to edit
     // if it is on edit, update the content of the post
     posts[index].title = title;
     posts[index].content = content;
+    posts[index].imgUrl = imgUrl;
     posts[index].mode = "view";
 }

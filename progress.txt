@@ -30,6 +30,26 @@ update logic: the update btn will open edit textbox if it is closed and will clo
 In the edit mode, the textbox has a submit button which will close the textbox and update the post content.
 (design the expected logic and then code it)
 
+Image upload:
+file reader converts image into 64base data string. By passing the data string as src for the image,
+we can display the image.
+Difficulty:
+The usual btn input only sends the file path of the image not the data string. Only the hidden input sends
+the whole data string.
+There is also a limit to the data sent from browser to server.
+need to pass in an argument in bodyParser.urlencoded({limit: '50mb'})
+
+problem: ejs partial fall out of parent container:
+solve, in the post.ejs, there was a misplaced </div> closing tag
+
 TODO
-upload images
 polish css
+
+
+layout the page to left and right side, align things on each half
+structure post creation div
+structure each post
+custom buttons
+upload blog icon
+resize textbox
+adjust font and font-fam for each part
