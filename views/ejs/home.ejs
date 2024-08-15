@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>NanoBlog</title>
+    <title>MicroBlog</title>
 </head>
 <body>
     <header>
-        <img src="" alt="icon">
+        <img src="images/FigGraphics-NoBg.png" alt="icon">
+        <!-- image credit: https://www.vecteezy.com/free-vector/fig -->
     </header>
     <div class="container">
         <section class="post-creation">
             <button class="create-post">
                 Create Post
             </button>
-            <form action="/" method="post">
-                <input type="text" name="title">
-                <textarea name="content"></textarea>
+            <form action="/" method="post" class="creation-form">
+                <input type="text" class="title-box" name="title" placeholder="enter a title">
+                <textarea name="content" placeholder="enter the post content"></textarea>
+                <input type="file" class="imageInput" accept="image/*">
+                <input type="hidden" name="imgUrl" id="imgString">
                 <button class="submit-post" type="submit">
                     submit
                 </button>
-                <input type="file" class="imageInput" accept="image/*">
-                <input type="hidden" name="imgUrl" id="imgString">
             </form>
         </section>
     
@@ -37,7 +41,7 @@
     </div>
     
     <footer>
-
+        ©wsxxs2222
     </footer>
     <script src="js/home.js"></script>
 </body>

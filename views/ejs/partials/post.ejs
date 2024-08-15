@@ -1,25 +1,24 @@
 
-<h1>post</h1>
 <!-- post title content and image
     two modes: edit and view
     -->
 <% if (post.mode === "view") {%>
-    <div class="post-title">
+    <div class="title">
         <%= post.title %>
     </div>
-    <div class="text">
+    <div class="content">
         <%= post.content %> 
     </div>
 <% } else if (post.mode === "edit") { %>
     <form action="/update" method="post">
-        <input type="text" name="title" value="<%= post.title %>">
-        <input type="textarea" name="content" value="<%= post.content %>">
-        <input type="file" class="imgUpdate" accept="image/*" value=<%= index %>>
+        <input type="text" class="title-box" name="title" value="<%= post.title %>" placeholder="enter a title">
+        <textarea name="content" placeholder="enter the post content"><%= post.content %></textarea>
+        <input type="file" class="imgUpdate" accept="image/*">
         <button class="submit-post" type="submit" name="index" value=<%= index %>>
             OK
         </button>
         <!-- hidden input to pass the updated image -->
-            <input type="hidden" class="<%= "img-url" + post.index %>" name="imgUrl">
+        <input type="hidden" class="<%= "img-url" + post.index %>" name="imgUrl" value="<%= post.imgUrl %>">
     </form>
 <% } %>
 
@@ -32,13 +31,15 @@
 
 
 <!-- update and delete buttons -->
-<form action="/edit" method="post">
-    <button class="update" type="submit" name="index" value=<%= index %>>
-        ⬆️
-    </button>
-</form>
-<form action="/delete" method="post">
-    <button class="delete" name="index" value=<%= index %> type="submit">
-        🗑️
-    </button>
-</form>
+<div class="function-btns">
+    <form action="/edit" method="post">
+        <button class="update" type="submit" name="index" value=<%= index %>>
+            ⬆️
+        </button>
+    </form>
+    <form action="/delete" method="post">
+        <button class="delete" name="index" value=<%= index %> type="submit">
+            🗑️
+        </button>
+    </form>
+</div>

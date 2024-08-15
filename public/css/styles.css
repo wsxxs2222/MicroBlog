@@ -1,23 +1,118 @@
 body {
-    color: aquamarine;
+    margin: 0;
 }
 
+header {
+    background-color: #CE68DE;
+}
+
+footer {
+    text-align: center;
+    background-color: #CE68DE;
+    height: 30px;
+}
+
+/* sizing */
 img {
     height: 200px;
+    max-width: 450px;
+}
+
+header img {
+    height: 50px;
+    margin-left: 2vw;
 }
 
 textarea {
     height: 150px;
+    width: 80%;
 }
 
+.submit-post {
+    width: 85px;
+    height: 20px;
+}
+
+/* custom buttons */
+button {
+    border-radius: 10%;
+    border: none;
+    background-color: #8168DE;
+}
+
+/* dividing the page into halves  */
 .container {
     display: flex;
 }
 
 .post-creation {
     flex-basis: 50vw;
+    padding-left: 2vw;
+    background-color: #A868DE40;
 }
 
 .post-view {
     flex-basis: 50vw;
+    padding-left: 2vw;
+    background-color: #E06C7120;
 }
+
+/* adjust block and inline elements */
+.title-box {
+    display: block;
+    height: 20px;
+    width: 80%;
+}
+
+.imageInput {
+    display: block;
+}
+
+.imgUpdate {
+    display: block;
+}
+
+.function-btns form {
+    display: inline-block;
+}
+
+/* font size and fam adjustments */
+.title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+/* margin and paddings */
+.post {
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-bottom: 10px;
+}
+
+.post img {
+    margin-bottom: 10px;
+}
+
+.create-post {
+    height: 1.6rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.submit-post {
+    margin: 5px 0px;
+}
+
+textarea {
+    margin-bottom: 2px;
+}
+
