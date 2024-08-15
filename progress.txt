@@ -53,3 +53,13 @@ custom buttons
 upload blog icon
 resize textbox
 adjust font and font-fam for each part
+
+
+design idea:
+purple: Worth, royalty.
+fig is purple.
+Select analogous colors for the buttons on the color wheel. Also blue is a 
+typical color for buttons.
+I choose a darker background (and greater opacity) on the post creation half because it has less 
+content. A darker color makes it feel more filled.
+I made a Serif font for all post titles to make them look more 'country style?'
